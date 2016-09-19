@@ -1,0 +1,89 @@
+/*
+Variables
+*/
+
+$main-color: #001f37;
+$complementary-color: #f6861f;
+$link-color: #005184;
+$additional-color-purple: #421f62;
+$additional-color-green: #63bd45;
+$additional-color-blue: #002b45;
+$background-color-1: #eaedee;
+$background-color-2: #edf4fb;
+
+$tablet-width: 48em;
+$desktop-width: 80em;
+
+/*
+Mixins
+*/
+
+@mixin grid-container {
+  max-width: 90vw;
+  margin: 0 auto;
+  @media screen and(min-width: 48em){
+    max-width: 80vw;
+  }
+  @media screen and(min-width: 80em){
+    max-width: 60vw;
+  }
+}
+
+/*Main CSS*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fafafa;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: $background-color-1;
+  display: flex;
+  flex-flow: column nowrap;
+  font-weight: 400;
+  font-variants: common-ligatures;
+  font-feature-settings: "kern", "liga";
+  font-size: 1em;
+  line-height: 1.75em;
+  max-width: 80vw;
+  margin: 0 auto;
+  @include grid-container;
+  @media screen and(min-width: 48em){
+    flex-flow: row wrap;
+  }
+}
+
+.content__story {
+  min-width: 20em;
+  max-width: 35em;
+  /*background-color: #123456;*/
+}
+
+.overview__read-more {
+  background-color: #fff;
+  padding: 0.1em 1em;
+}
+
+.overview__story--button {
+  appearance: none;
+  border: none;
+  // padding: 1em;
+  // background-color: $complementary-color;
+  width: 0;
+  height: 0;
+  border-top: 2em solid red;
+  border-left: 2em solid transparent;
+  border-right: 5em solid red;
+  // transform: skewX(-20deg);
+  
+}
+
+.overview__story--button-text {
+  position: relative;
+  top: calc(-2.9em);
+  left: 1em;
+  // transform: translateY(-165%);
+  // transform: translateX(50%);
+}

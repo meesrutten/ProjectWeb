@@ -1,0 +1,61 @@
+/*
+Variables
+*/
+/*
+Mixins
+*/
+/*Main CSS*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+body {
+  background: #fafafa;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #eaedee;
+  display: flex;
+  flex-flow: column nowrap;
+  font-weight: 400;
+  font-variants: common-ligatures;
+  font-feature-settings: "kern", "liga";
+  font-size: 1em;
+  line-height: 1.75em;
+  max-width: 80vw;
+  margin: 0 auto;
+  max-width: 90vw;
+  margin: 0 auto; }
+  @media screen and (min-width: 48em) {
+    body {
+      max-width: 80vw; } }
+  @media screen and (min-width: 80em) {
+    body {
+      max-width: 60vw; } }
+  @media screen and (min-width: 48em) {
+    body {
+      flex-flow: row wrap; } }
+
+.content__story {
+  min-width: 20em;
+  max-width: 35em;
+  /*background-color: #123456;*/ }
+
+.overview__read-more {
+  background-color: #fff;
+  padding: 0.1em 1em; }
+
+.overview__story--button {
+  appearance: none;
+  border: none;
+  width: 0;
+  height: 0;
+  border-top: 2em solid red;
+  border-left: 2em solid transparent;
+  border-right: 5em solid red; }
+
+.overview__story--button-text {
+  position: relative;
+  top: calc(-2.9em);
+  left: 1em; }
+
+/*# sourceMappingURL=main.css.map */

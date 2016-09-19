@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Overzicht Pagina</title>
+
+    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- <% if (includeModernizr) { %> -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <!-- <script src="/bower_components/modernizr/modernizr.js"></script> -->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="header" role=banner>
+      <h1>Short Stories</h1>
+    </header>
+
+    <main>
+
+      <article class="overview__read-more">
+        <h1 class="overview__read-more--title">Verder lezen</h1>
+        <article class="overview__content--story">
+          <h1 class="overview__story--title">Beroemd</h1>
+          <p class="overview__story--text">Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn diensten. Hij zwaait joviaal terug.</p>
+          <div class="overview__story--button"><p class="overview__story--button-text">Lezen</p></div> <!--SVG-->
+        </article>
+        <p class="overview__story--progress">64% voltooid</p>
+      </article>
+
+      <div class="sorting__wrapper">
+        <select>
+          <option value="meest-recent">Meest recent</option>
+          <option value="meeste-likes">Meeste likes</option>
+          <option value="meeste-comments">Meeste comments</option>
+          <option value="populair">Populair</option>
+        </select>
+
+        <select>
+          <option value="maand">Deze maand</option>
+          <option value="week">Deze week</option>
+          <option value="vandaag">Vandaag</option>
+          <option value="jaar">Dit jaar</option>
+        </select>
+      </div>
+
+      <button>meer sorteren/filters</button>
+      <button>Toepassen</button>
+      <div>
+        <h2>Titel</h2>
+        <input type="radio" name="az" value="a-z">
+        <label for="az">A - Z</label>
+        <input type="radio" name="za" value="z-a">
+        <label for="za">Z - A</label>
+      </div>
+      <div>
+        <h2>Datum</h2>
+        <input type="radio" name="new" value="new">
+        <label for="new">Nieuw</label>
+        <input type="radio" name="old" value="old">
+        <label for="old">Oud</label>
+      </div>
+      <div>
+        <h2>Taal</h2>
+        <input type="radio" name="nl" value="nl">
+        <label for="dutch">Nederlands</label>
+        <input type="radio" name="fr" value="fr">
+        <label for="new">Frans</label>
+      </div>
+      <!-- <div class="range-slider" data-slider data-options="start: 1; end: 10;">
+        <span class="range-slider-handle" role="slider" tabindex="0"></span>
+        <span class="range-slider-active-segment"></span>
+        <input type="hidden">
+    </div> -->
+      <article class="overview__content">
+        <h1 class="overview__content--title">Trending</h1>
+        <a href="" class="overview__content--story-link">
+          <article class="overview__content--story">
+            <h1 class="overview__story--title">Beroemd</h1>
+            <p class="overview__story--text">Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn diensten. Hij zwaait joviaal terug.</p>
+            <div class="overview__story--button">Lezen</div> <!--SVG-->
+          </article>
+        </a>
+        <a href="" class="overview__story--progress-link">8 likes</a>
+        <a href="" class="overview__story--progress-link">4 comments</a>
+
+        <a href="" class="overview__content--story-link">
+          <article class="overview__content--story">
+            <h1 class="overview__story--title">Freudiaans</h1>
+            <p class="overview__story--text">Ik stap uit de lul. Mijn aarsrivaal ligt te slapen in zijn kinderwagen. Wat een kutweer. De mensen zijn met zichzelf bezig, wat er hoogstwaarschijnlijk op neerkomt dat ze aan seks met hun moeder denken.</p>
+            <div class="overview__story--button">Lezen</div> <!--SVG-->
+          </article>
+        </a>
+        <a href="" class="overview__story--progress-link">8 likes</a>
+        <a href="" class="overview__story--progress-link">4 comments</a>
+
+        <a href="" class="overview__content--story-link">
+          <article class="overview__content--story">
+            <h1 class="overview__story--title">Steenkolenfrans</h1>
+            <p class="overview__story--text">Le premier fevrièr 2011. Presque midi. Le bus s’arrête. Ligne 21. Place de Gare Centrale. Je marche au derrière d’un poussette. Mon fils dort.</p>
+            <div class="overview__story--button">--></div> <!--SVG-->
+          </article>
+        </a>
+        <a href="" class="overview__story--progress-link">8 likes</a>
+        <a href="" class="overview__story--progress-link">4 comments</a>
+
+      </article>
+
+      <article class="content__story" role=article>
+      </article>
+
+
+    </main>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts/plugins.js -->
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
