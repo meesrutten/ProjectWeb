@@ -11,51 +11,312 @@ Mixins
   box-sizing: border-box; }
 
 body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #eaedee;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   font-weight: 400;
   font-variants: common-ligatures;
   font-feature-settings: "kern", "liga";
+  font-size: 16px;
   font-size: 1em;
-  line-height: 1.75em;
-  max-width: 80vw;
-  margin: 0 auto;
-  max-width: 90vw;
+  line-height: 1.5;
   margin: 0 auto; }
-  @media screen and (min-width: 48em) {
-    body {
-      max-width: 80vw; } }
-  @media screen and (min-width: 80em) {
-    body {
-      max-width: 60vw; } }
-  @media screen and (min-width: 48em) {
+  @media (min-width: 48em) {
     body {
       flex-flow: row wrap; } }
+  @media (min-width: 80em) {
+    body {
+      justify-content: space-between; } }
 
-.content__story {
-  min-width: 20em;
-  max-width: 35em;
-  /*background-color: #123456;*/ }
+h1, h2, h3 {
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600; }
 
-.overview__read-more {
+a, a:visited {
+  text-decoration: none;
+  color: #005184;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  transition: color 200ms ease-in; }
+  a:hover, a:visited:hover {
+    color: #001f37; }
+
+.header {
+  color: #001f37;
   background-color: #fff;
-  padding: 0.1em 1em; }
+  max-width: 100vw;
+  width: 100vw;
+  box-shadow: 0 2px 0 0 rgba(7, 7, 33, 0.15);
+  border-bottom: 1px solid #005184; }
+  .header h1 {
+    border-bottom: 3px solid #001f37; }
+  .header a {
+    color: #001f37; }
 
-.overview__story--button {
+.header__grid-container {
+  max-width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  height: 100%; }
+
+.header__button-container {
+  display: flex;
+  height: 100%; }
+
+.header__button {
+  display: flex;
   appearance: none;
   border: none;
+  background-color: #fff;
+  border-left: 2px solid #001f37;
+  width: 6em;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 300ms linear; }
+  .header__button:hover {
+    background-color: #005184; }
+    .header__button:hover svg g {
+      stroke: #eaedee; }
+
+.header__button--profile {
+  border-right: 2px solid #001f37;
+  max-width: 4.375em; }
+
+.overview {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 90vw;
+  margin: 0 auto; }
+  @media (min-width: 48em) {
+    .overview {
+      flex-flow: row wrap; }
+      .overview > section {
+        max-width: 42.5vw; }
+      .overview > :first-child, .overview > :nth-child(2n+4) {
+        margin-right: 5vw; } }
+  @media (min-width: 80em) {
+    .overview {
+      max-width: 65vw;
+      margin: 0 1em;
+      flex-flow: row wrap; }
+      .overview > section {
+        max-width: 30vw; } }
+
+.excerpt {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 1em auto;
+  background-color: #fff;
+  padding: 0 1em 1em 1em;
+  width: 100%;
+  box-shadow: 0 2px 0 0 rgba(7, 7, 33, 0.15); }
+
+.excerpt__read-more {
+  margin-bottom: 0; }
+
+.excerpt__title {
+  margin: 0;
+  padding-top: 1em; }
+
+.excerpt__leader {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+
+.excerpt__metadata {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; }
+
+.excerpt__progress {
+  padding: 0;
+  margin: 0;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600; }
+
+.pointed-button {
+  appearance: none;
+  color: #fff;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  align-self: center;
+  margin-right: -1em;
   width: 0;
   height: 0;
-  border-top: 2em solid red;
-  border-left: 2em solid transparent;
-  border-right: 5em solid red; }
+  border-left: 1.25em solid transparent;
+  border-bottom: 2em solid #f6861f;
+  border-right: 5em solid #f6861f;
+  text-decoration: none;
+  transition: all 300ms linear; }
+  .pointed-button > span {
+    vertical-align: middle;
+    margin-left: 0.8em; }
+  .pointed-button:hover {
+    border-bottom: 2em solid #c16008;
+    border-right: 5em solid #c16008; }
 
-.overview__story--button-text {
+.pointed-button__text {
   position: relative;
-  top: calc(-2.9em);
-  left: 1em; }
+  top: 0.15em;
+  left: 1em;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600; }
+
+.sorting button {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  width: 100%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  background-color: #005184;
+  color: #fff;
+  border-radius: 0;
+  padding: 1em 0;
+  text-align: center;
+  transition: all 300ms linear; }
+  .sorting button span {
+    display: inline-block;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 0;
+    margin: 0 -100% 0 1.5em;
+    float: left;
+    width: 1em;
+    height: 1em;
+    transform: rotate(-135deg); }
+  .sorting button .caret-rotate {
+    border-left: 2px solid #fff;
+    border-bottom: 0;
+    border-top: 2px solid #fff; }
+  .sorting button:focus {
+    outline: none; }
+  .sorting button:hover {
+    background-color: #001f37; }
+
+.sorting__small-screen {
+  margin-top: 1em; }
+  @media (min-width: 48em) {
+    .sorting__small-screen {
+      width: 90vw; }
+      .sorting__small-screen:nth-child(3) {
+        margin-bottom: 1em; } }
+
+.sort-option__list, .extra-option__list {
+  display: none;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #000; }
+  .sort-option__list label, .extra-option__list label {
+    display: block;
+    width: 60%;
+    background-color: #f9f9f9;
+    padding: 0.75em;
+    cursor: pointer;
+    border-bottom: 1px solid #fff; }
+    .sort-option__list label:nth-child(odd), .extra-option__list label:nth-child(odd) {
+      background-color: #eee; }
+    .sort-option__list label input[type="radio"], .extra-option__list label input[type="radio"] {
+      margin: 0 2em 0 1em; }
+
+.hide-option__list {
+  display: block; }
+
+@media (min-width: 80em) {
+  main .sorting {
+    display: none; } }
+
+.desktop__sorting {
+  display: none; }
+  @media (min-width: 80em) {
+    .desktop__sorting {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      width: 25vw;
+      margin: 0; }
+      .desktop__sorting .sorting .sorting__button, .desktop__sorting .sorting .sorting__button--extra {
+        border-left: 0; }
+      .desktop__sorting .sorting .sort-option__list label, .desktop__sorting .sorting .extra-option__list label {
+        width: 100%;
+        margin: -1px 0 0 -1px;
+        border: 1px solid #005184; } }
+
+@media (min-width: 48em) {
+  .sort-based__title {
+    display: none; } }
+
+.login-form {
+  max-width: 90vw;
+  margin: 0 auto; }
+
+form {
+  display: block;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
+  @media (min-width: 48em) {
+    form {
+      width: 35em; } }
+
+form fieldset {
+  border: none; }
+
+form fieldset label {
+  display: block;
+  margin: 1em auto; }
+
+form fieldset label input {
+  display: block;
+  max-width: 100%;
+  padding: 0.85em;
+  width: 100%;
+  border: 0;
+  margin: 0.5em auto;
+  font-size: 1em;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  letter-spacing: 1px; }
+  form fieldset label input:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px #005184; }
+
+fieldset h1 + p {
+  font-size: 1em;
+  font-weight: 600; }
+
+form label ~ input {
+  appearance: none;
+  border: none;
+  padding: 0.75em 2em;
+  margin: 1em auto;
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background-color: #f6861f;
+  transition: all 300ms linear; }
+  form label ~ input:hover {
+    background-color: #c16008; }
+
+form a {
+  display: block;
+  font-size: 0.85em; }
+
+form input[type="submit"] ~ a {
+  display: inline-block;
+  float: right;
+  padding: 0.5em 2em;
+  margin: 1em auto;
+  font-size: 1em;
+  font-weight: 600;
+  color: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+  transition: all 300ms linear; }
+  form input[type="submit"] ~ a:hover {
+    background-color: #c16008;
+    color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
