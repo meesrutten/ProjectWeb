@@ -1,0 +1,125 @@
+body {
+  background-color: #fff;
+}
+.story__body {
+  font-size: 1.5em;
+}
+
+.sleeping {
+  height: 80vh;
+  margin: 1em auto;
+}
+
+.cloud__story {
+  margin-top: -75%;
+  font-size: 1.5em;
+  line-height: 1.75;
+  margin-bottom: 50%;
+}
+
+.asleep {
+  background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(163,163,163,0.5) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(163,163,163,0.5) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.wake-up {
+  background: -webkit-linear-gradient(left, rgba(163,163,163,0.5) 0%,rgba(0,0,0,1) 100%);
+  background: linear-gradient(to right, rgba(163,163,163,0.5) 0%,rgba(0,0,0,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.last-sentence {
+  font-family: "Signika";
+  display: block;
+  text-align: center;
+  font-size: 3em;
+  margin: 1em auto;
+}
+
+.cloud1 {
+  background: url(../images/cloud1.png) no-repeat;
+  background-size: 100%;
+  width: 20.625em;
+  height: 15em;
+  position: relative;
+  top: 10vh;
+  animation: clouds 25s linear infinite;
+  transform: translateZ(0) translateX(-50%);
+  left: 50%;
+  // margin-left: -300px;
+  // transition: .2s;
+}
+.cloud2 {
+  background: url(../images/cloud2.png) no-repeat;
+  background-position: 50%;
+  background-size: 10.5em 6.875em;
+  width: 16.75em;
+  height: 15.625em;
+  position: relative;
+  top: -15vh;
+  transform: translateZ(0) translateX(-50%);
+  // right: 50%;
+  // margin-right: -400px;
+  animation: clouds 25s linear infinite;
+  transition: .2s;
+}
+.cloud3 {
+  background: url(../images/cloud2.png) no-repeat;
+  background-position: 50%;
+  background-size: 12.5em 10em;
+  width: 18.75em;
+  height: 18.75em;
+  position: relative;
+  top: -25vh;
+  right: 10%;
+  transform: translateZ(0) translateX(-50%) rotateY(180deg);
+
+  // margin-right: -400px;
+  animation: reverseClouds 25s linear infinite;
+  // transition: .2s;
+}
+
+@keyframes clouds {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes reverseClouds {
+  0% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+    // background: url(../img/cloud2.png) no-repeat;
+    // background-position: 50%;
+    // background-size: 200px 160px;
+    // width: 300px;
+    // height: 300px;
+    // position: absolute;
+    // top: 200px;
+    // transform: translateZ(0) translateX(-50%) rotateY(180deg);
+    // right: 50%;
+    // margin-right: -400px;
+    // animation: e 30s linear infinite;
+    // transition: .2s;

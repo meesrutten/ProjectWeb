@@ -29,13 +29,26 @@
           </svg>
         </a>
       </div>
+      <div class="search__field no-display">
+        <input class="search-bar" type="text" name="search" placeholder="Uw zoekopdracht">
+        <button class="search-button">
+          <svg width="30" height="28" viewBox="275 18 30 28" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd" transform="translate(277 20)" stroke="#fff" stroke-width="2">
+              <circle cx="8.565" cy="8.565" r="8.565"/>
+              <path d="M15.896 14.896l8.772 7.552" stroke-linecap="square"/>
+            </g>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
   <aside class="desktop__sorting">
     <div class="sorting">
-      <button class="sorting__button"><span></span>Sorteer</button>
-      <div class="sort-option__list">
+      <input type="checkbox" id="sliderToggle" class="sliderCheckbox">
+      <label for="sliderToggle" class="accordion"><span class="caret"></span>Openingstijden</label>
+
+      <div class="menu-1">
         <label for="meest-recent">
           <input name="main-sort" id="meest-recent" type="radio" value="meest-recent">Meest recent</input>
         </label>
@@ -50,8 +63,10 @@
         </label>
       </div>
 
-      <button class="sorting__button--extra"><span></span>Sorteer op</button>
-      <div class="extra-option__list">
+      <input type="checkbox" id="sliderToggle2" class="sliderCheckbox">
+      <label for="sliderToggle2" class="accordion"><span class="caret"></span>Informatie</label>
+
+      <div class="menu-2">
         <label for="month">
           <input name="secondary-sort" id="month" type="radio" value="maand">Deze maand</input>
         </label>
@@ -72,7 +87,7 @@
     <section class="read-more">
       <h1 class="read-more__title">Verder lezen</h1>
       <article class="excerpt excerpt__read-more">
-        <img src="/images/voetbalfans.jpg" alt="Voetbal fans">
+        <!-- <img src="/images/voetbalfans.jpg" alt="Voetbal fans"> -->
         <h1 class="excerpt__title">Moe</h1>
         <p class="excerpt__leader">De buschauffeur port me wakker. We zijn bij de eindhalte, Centraal Station. Ik stap uit en duw de kinderwagen voort waarin mijn zoon ligt te slapen. Ik wou dat ik hem was.</p>
         <div class="excerpt__metadata">
@@ -102,7 +117,45 @@
     </section>
 
     <div class="sorting sorting__small-screen">
-      <button class="sorting__button"><span></span>Sorteer</button>
+      <div class="sorting__button">
+        <input type="checkbox" id="sliderToggle3" class="sliderCheckbox">
+        <label for="sliderToggle3" class="accordion"><span class="caret"></span>Sorteer</label>
+        <div class="menu-3">
+          <label for="meest-recent2">
+            <input name="main-sort" id="meest-recent2" type="radio" value="meest-recent">Meest recent</input>
+          </label>
+          <label for="meeste-likes2">
+            <input name="main-sort" id="meeste-likes2" type="radio" value="meeste-likes">Meeste likes</input>
+          </label>
+          <label for="meeste-comments3">
+            <input name="main-sort" id="meeste-comments3" type="radio" value="meeste-comments">Meeste comments</input>
+          </label>
+          <label for="populair4">
+            <input name="main-sort" id="populair4" type="radio" value="populair">Populair</input>
+          </label>
+        </div>
+      </div>
+
+    <div class="sorting__button">
+      <input type="checkbox" id="sliderToggle4" class="sliderCheckbox">
+      <label for="sliderToggle4" class="accordion"><span class="caret"></span>Informatie</label>
+
+      <div class="menu-4">
+        <label for="month2">
+          <input name="secondary-sort" id="month2" type="radio" value="maand">Deze maand</input>
+        </label>
+        <label for="week3">
+          <input name="secondary-sort" id="week3" type="radio" value="week">Deze week</input>
+        </label>
+        <label for="today4">
+          <input name="secondary-sort" id="today4" type="radio" value="vandaag">Vandaag</input>
+        </label>
+        <label for="year5">
+          <input name="secondary-sort" id="year5" type="radio" value="jaar">Dit jaar</input>
+        </label>
+      </div>
+    </div>
+      <!-- <button class="sorting__button"><span></span>Sorteer</button>
       <div class="sort-option__list">
         <label for="meest-recent">
           <input name="main-sort" id="meest-recent" type="radio" value="meest-recent" checked="checked">Meest recent</input>
@@ -118,7 +171,7 @@
         </label>
       </div>
 
-      <button class="sorting sorting__button--extra"><span></span>Sorteer op</button>
+      <button class="sorting sorting__button-extra"><span></span>Sorteer op</button>
       <div class="extra-option__list">
         <label for="month">
           <input name="secondary-sort" id="month" type="radio" value="maand">Deze maand</input>
@@ -132,7 +185,7 @@
         <label for="year">
           <input name="secondary-sort" id="year" type="radio" value="jaar">Dit jaar</input>
         </label>
-      </div>
+      </div> -->
     </div>
 
     <div class="sort-based__title-container">
